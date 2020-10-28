@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+*{margin:0;padding:0;box-sizing: border-box;}
+:link, :visited {color:inherit; text-decoration: none;}
+ul{list-style-type: none;}
+
+
+header {
+    width: 1519px;
+    height: 90px;
+    margin-bottom: 100px;
+}
+#fixing {
+    position: fixed;
+    width: 1519px;
+    height: 95px;
+    background-color: white;
+    border-bottom: solid 1px rgb(141, 139, 139);
+    z-index: 100;
+}
+#fixing img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 1.5%;
+}
+nav {
+    position: absolute;
+    margin-left: 7%;
+    display: inline-block;
+    width: 700px;
+    height: 50px;
+    margin-top: 2%;
+}
+nav li {
+    display: inline-block;
+    padding: 0 5%;
+    font-size: 20px;
+}
+nav li:hover {
+    color: rgb(70, 70, 163);
+}
+#product {
+    color: rgb(70, 70, 163);
+}
+#login {
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 2.3%;
+    display: inline-block;
+    width: 200px;
+}
+#login a{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    padding: 7px 47px;
+    background-color: rgb(8, 118, 146);
+    border-top-right-radius: 25px 30px;
+    border-top-left-radius: 25px 30px;
+    border-bottom-right-radius: 25px 30px;
+    border-bottom-left-radius: 25px 30px;
+}
+
+article {
+    width: 1519px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Do Hyeon";
+}
+#title {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#footermainimg {
+    position: relative;
+    width: 1519px;
+    height : 365px;
+    background-image: url(../img/footerimg.png);
+    background-size: 1519px 365px;
+    background-repeat: no-repeat;
+}
+#footerclickimg {
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 30%;
+}
+#footerclickimg li img{
+    width: 35px;
+    height: auto;   
+    margin: 9px auto 9px auto;
+}
+#footerlineimg {
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 34%;
+    width: 5px;
+    height: 170px;
+    background-color: white;
+}
+#footertable {
+    width: 600px;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 35%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+#footernuewturnimg img {
+    width: 150px;
+    height: auto;
+}
+#footertable td {
+    position: relative;
+    padding-top: 10px;
+    font-size: 18px;
+}

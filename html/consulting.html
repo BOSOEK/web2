@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWTURN-컨설팅</title>
+    <link href="../style/consulting.css" rel="stylesheet">
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+        function initialize() {
+            var Y_point			= 35.142729;	
+            var X_point			= 126.800118;		
+
+            var zoomLevel		= 16;					
+
+            var markerTitle		= "광주 소프트웨어 마이스터고등학교";			
+            var markerMaxWidth	= 300;				
+
+            var contentString	= '<div>' +
+            '<h2>광주 소프트웨어 마이스터고등학교</h2>'+
+            '<br>NewTurn 팀이 재학중인 학교입니다.' +
+            '</div>';
+
+            var myLatlng = new google.maps.LatLng(Y_point, X_point);
+            var mapOptions = {
+                zoom: zoomLevel,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById('map_view'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: markerTitle
+            });
+
+            var infowindow = new google.maps.InfoWindow(
+                {
+                    content: contentString,
+                    maxWidth: markerMaxWidth
+                }
+            );
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    
+</head>
+<body onload="initialize()">
+    <header>
+        <div id="fixing">
+            <a href="../index.html"><img src="../img/뉴턴아이콘이미지.PNG" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="company_introduce.html" id="company"><strong>회사소개</strong></a></li>
+                    <li><a href="product_introduce.html" id="product"><strong>제품소개</strong></a></li>
+                    <li><a href="consulting.html" id="consulting"><strong>컨설팅</strong></a></li>
+                    <li><a href="community.html" id="community"><strong>커뮤니티</strong></a></li>
+                </ul>
+            </nav>
+            <div id="login"><a href="loginform.html"><strong>로그인</strong></a></div>
+        </div>
+    </header>
+    <article>
+        <div>
+            <h1 style="border-bottom: 5px purple solid; width:fit-content; padding: 0 30px; margin-bottom: 100px; margin-left: 45%;">컨설팅</h1>
+        </div>
+        <img src="../consultingimg/couch.png">
+
+        <p style=margin-top:20px;>
+        살고 싶은 집을 선택해주세요
+        </p>
+        <div id="choice">
+            <a href=""><img src="../consultingimg/아파트.png"></a>
+            <a href=""><img src="../consultingimg/주택.png"></a>
+            <a href=""><img src="../consultingimg/빌라.png"></a>
+        </div>
+        <p style="text-align: left; padding-left: 20px; height: 100px; margin-top:50px;">
+            현재 나온 매물    
+        </p>
+        <div id="map_view" style="width:90%; height: 600px; margin: 0 60px 0;"></div>
+
+        <div id="board">
+            <div id="example">
+                <a href="">
+                    <img src="../consultingimg/네모.png"><br>
+                    30평<br>
+                    방 1개
+                </a>
+            </div>
+            <div id="example">
+                <a href="">
+                    <img src="../consultingimg/네모.png"><br>
+                    30평<br>
+                    방 1개
+                </a>
+            </div>
+            <div id="example">
+                <a href="">
+                    <img src="../consultingimg/네모.png"><br>
+                    30평<br>
+                    방 1개
+                </a>
+            </div>
+            <div id="example">
+                <a href="">
+                    <img src="../consultingimg/네모.png"><br>
+                    30평<br>
+                    방 1개
+                </a>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div id="footermainimg">
+            <ul id="footerclickimg">
+                <li><a href="https://www.instagram.com/?hl=ko"><img src="../img/camera.png"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../img/facebook.png"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="../img/youtube.png" ></a></li>
+            </ul>
+            <div id="footerlineimg"></div>
+            <table id="footertable">
+                <tr>
+                    <th>문의전화</th>
+                    <th>일하는 팀원들</th>
+                    <th>회사-(주)얼리</th>
+                </tr>
+                <tr>
+                    <td>웹 관리자 김양득</td>
+                    <td>대표       박민서</td>
+                    <td rowspan="3" id="footernuewturnimg"><img src="../img/footernewturnimg.PNG" alt=""></td>
+                </tr>
+                <tr>
+                    <td>010-1234-5678</td>
+                    <td>웹제작   양태웅,김보석</td>
+                   <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>기획부     정영민</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+</body>
+</html>
